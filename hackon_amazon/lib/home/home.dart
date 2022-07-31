@@ -21,6 +21,8 @@ class _HomeState extends State<Home> {
         liked: false,
         discount: "25%",
         oldPrice: "15,999",
+        verify: 'Positive',
+        authenticated: true,
         itemCount: 1),
     Product(
       id: 2,
@@ -32,6 +34,8 @@ class _HomeState extends State<Home> {
       liked: false,
       discount: "50%",
       oldPrice: "35,999",
+      verify: 'Neutral',
+      authenticated: false,
       itemCount: 2,
     ),
     Product(
@@ -44,6 +48,8 @@ class _HomeState extends State<Home> {
       liked: true,
       discount: "50%",
       oldPrice: "27,999",
+      verify: 'Negative',
+      authenticated: false,
       itemCount: 0,
     ),
   ];

@@ -302,11 +302,18 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                         children: [
                           Row(
                             children: [
-                              Text('Authenticated'),
-                              Icon(
-                                Icons.verified,
-                                color: Colors.green,
-                              ),
+                              widget.productDetail.authenticated
+                                  ? Text('Authenticated')
+                                  : Text('Not Authenticated'),
+                              widget.productDetail.authenticated
+                                  ? Icon(
+                                      Icons.verified,
+                                      color: Colors.green,
+                                    )
+                                  : Icon(
+                                      Icons.close,
+                                      color: Colors.red,
+                                    ),
                               WillPopScope(
                                   onWillPop: _willPopCallback,
                                   child: IconButton(
@@ -317,9 +324,11 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                           ),
                           Row(
                             children: [
-                              Text('Positive'),
+                              Text(widget.productDetail.verify),
                               Icon(
-                                Icons.emoji_emotions,
+                                widget.productDetail.verify == 'Positive'
+                                    ? Icons.emoji_emotions
+                                    : Icons.emoji_emotions_rounded,
                                 color: Colors.orangeAccent,
                               ),
                               WillPopScope(

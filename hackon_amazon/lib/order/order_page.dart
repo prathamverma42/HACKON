@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:hackon_amazon/order/order_completed.dart';
 import 'package:image_picker/image_picker.dart';
 
 class OrderPage extends StatefulWidget {
@@ -89,7 +90,11 @@ class _OrderPageState extends State<OrderPage> {
                     ],
                   ),
                 );
-              } else {}
+              } else {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return OrderComplete();
+                }));
+              }
             },
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),

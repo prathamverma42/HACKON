@@ -9,6 +9,8 @@ class Product {
   final bool liked;
   final String? tag;
   final int itemCount;
+  final String verify;
+  final bool authenticated;
 
   Product(
       {required this.id,
@@ -20,5 +22,7 @@ class Product {
       this.discount,
       required this.liked,
       this.tag,
-      required this.itemCount});
+      required this.itemCount,
+      required this.verify,
+      required this.authenticated});
 }
