@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hackon_amazon/Auth/sign_up.dart';
 
+import '../home/home.dart';
+
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -72,7 +74,12 @@ class _LoginState extends State<Login> {
               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(builder: ((context) => Home())),
+                        (route) => false);
+                  },
                   minWidth: width * 0.8,
                   height: height * 0.055,
                   color: Colors.blue,
