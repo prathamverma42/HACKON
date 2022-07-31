@@ -58,7 +58,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
       content: new Material(
           color: Colors.orange,
           child: Text(
-            '1. Wallet balance is subjected to tax deduction as per govt and company\'s policies. \n\n2. Amount shown in withdrawable balance is before any tds deduction. \n\n3. Amount that you receive on requesting withdrawal is after tax deductions.\n\n4. Current TDS - %',
+            'Verified by our model',
             softWrap: true,
             style: TextStyle(
                 fontSize: 12.0,
